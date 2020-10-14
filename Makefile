@@ -39,6 +39,7 @@ debian.ova: converted-disk1.vmdk
 	ovftool debian.ovf debian.ova
 
 upload: debian.ova
+	rm $(TEMPLATE_NAME) || true
 	ln -s debian.ova $(TEMPLATE_NAME)
 	vcd catalog delete -y $(VCD_ORG) $(TEMPLATE_NAME) || true
 	vcd catalog upload    $(VCD_ORG) $(TEMPLATE_NAME) || true
