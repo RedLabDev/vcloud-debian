@@ -1,0 +1,5 @@
+.encoding = "UTF-8"
+scsi0:0.present = "TRUE"
+scsi0:0.deviceType = "disk"
+scsi0:0.fileName = "debian.vmdk"
+scsi0.present = "TRUE"
